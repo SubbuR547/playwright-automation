@@ -42,20 +42,20 @@ test.describe('Hard Assertions Practice', () => {
     console.log(' Step 5 — products page verified!');
   });
 
-  test('see what happens when hard assertion fails',
-    async ({ page }) => {
-    await page.goto('https://www.saucedemo.com/');
-    console.log('Before failing assertion');
+  // test('see what happens when hard assertion fails',
+  //   async ({ page }) => {
+  //   await page.goto('https://www.saucedemo.com/');
+  //   console.log('Before failing assertion');
 
-    // Intentional failure!
-    await expect(
-      page,
-      'Title should be wrong — intentional failure'
-    ).toHaveTitle('Wrong Title That Does Not Exist');
+  //   // Intentional failure!
+  //   await expect(
+  //     page,
+  //     'Title should be wrong — intentional failure'
+  //   ).toHaveTitle('Wrong Title That Does Not Exist');
 
-    // These NEVER run!
-    console.log('This line never prints!');
-    console.log('This line never prints either!');
-  });
+  //   // These NEVER run!
+  //   console.log('This line never prints!');
+  //   console.log('This line never prints either!');
+  // });
 
 });

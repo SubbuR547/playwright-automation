@@ -27,11 +27,11 @@ test.describe('Soft Assertions — SauceDemo', () => {
     console.log('After assertion 2');
 
     // ❌ Fail — but continues!
-    await expect.soft(
-      page.getByText('This text does not exist'),
-      'This will fail but test continues!'
-    ).toBeVisible();
-    console.log('After assertion 3 — I still run!');
+    // await expect.soft(
+    //   page.getByText('This text does not exist'),
+    //   'This will fail but test continues!'
+    // ).toBeVisible();
+    // console.log('After assertion 3 — I still run!');
 
     // ✅ Pass
     await expect.soft(
@@ -41,11 +41,11 @@ test.describe('Soft Assertions — SauceDemo', () => {
     console.log('After assertion 4 — I still run too!');
 
     // ❌ Fail — but continues!
-    await expect.soft(
-      page.getByText('Another fake text'),
-      'This will also fail!'
-    ).toBeVisible();
-    console.log('After assertion 5 — still running!');
+    // await expect.soft(
+    //   page.getByText('Another fake text'),
+    //   'This will also fail!'
+    // ).toBeVisible();
+    // console.log('After assertion 5 — still running!');
 
     // ✅ Pass
     await expect.soft(page).toHaveTitle(/Swag Labs/);
@@ -84,29 +84,32 @@ test.describe('Soft Assertions — SauceDemo', () => {
     console.log('After checking Bike Light');
 
     await expect.soft(
-      page.getByText('Sauce Labs Bolt T-Shirt'),
-      'Bolt T-Shirt must be on page'
-    ).toBeVisible();
+  page.locator('[data-test="inventory-item-name"]',
+    { hasText: 'Sauce Labs Bolt T-Shirt' }),
+  'Bolt T-Shirt must be on page'
+).toBeVisible();
     console.log('After checking Bolt T-Shirt');
 
     await expect.soft(
-      page.getByText('Sauce Labs Fleece Jacket'),
+      page.locator('[data-test="inventory-item-name"]',
+        { hasText: 'Sauce Labs Fleece Jacket' }),
       'Fleece Jacket must be on page'
     ).toBeVisible();
     console.log('After checking Fleece Jacket');
 
     await expect.soft(
-      page.getByText('Sauce Labs Onesie'),
+      page.locator('[data-test="inventory-item-name"]',
+        { hasText: 'Sauce Labs Onesie' }),
       'Onesie must be on page'
     ).toBeVisible();
     console.log('After checking Onesie');
 
     // This product does NOT exist — fails but continues!
-    await expect.soft(
-      page.getByText('Fake Product XYZ'),
-      'Fake product — intentional failure!'
-    ).toBeVisible();
-    console.log('After checking fake product — still running!');
+    // await expect.soft(
+    //   page.getByText('Fake Product XYZ'),
+    //   'Fake product — intentional failure!'
+    // ).toBeVisible();
+    // console.log('After checking fake product — still running!');
 
     await expect.soft(
       page.getByText('Test.allTheThings() T-Shirt (Red)'),
