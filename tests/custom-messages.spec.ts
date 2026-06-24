@@ -85,10 +85,10 @@ test.describe('Custom Error Messages — SauceDemo', () => {
 
     // ── SEE INTENTIONAL FAILURE MESSAGE ───────────────
     // Comment this out after seeing the error message!
-    await expect(
-      page.locator('.shopping_cart_badge'),
-      ' Cart must show 99 items — intentional failure to see custom message!'
-    ).toHaveText('99');
+    // await expect(
+    //   page.locator('.shopping_cart_badge'),
+    //   ' Cart must show 99 items — intentional failure to see custom message!'
+    // ).toHaveText('99');
   });
 
 });
