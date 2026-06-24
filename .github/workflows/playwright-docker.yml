@@ -1,0 +1,33 @@
+name: Playwright Docker Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t playwright-tests .
+
+      - name: Run tests in Docker
+        run: |
+          docker run \
+            -e SAUCE_USERNAME=${{ secrets.SAUCE_USERNAME }} \
+            -e SAUCE_PASSWORD=${{ secrets.SAUCE_PASSWORD }} \
+            -v $(pwd)/playwright-report:/app/playwright-report \
+            playwright-tests
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: docker-playwright-report
+          path: playwright-report/
+          retention-days: 7
