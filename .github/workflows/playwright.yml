@@ -25,10 +25,10 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps 
 
       - name: Run Playwright tests
-        run: npx playwright test tests/hard-assertions.spec.ts tests/soft-assertions.spec.ts tests/negative-assertions.spec.ts tests/numeric-assertions.spec.ts tests/polling-assertions.spec.ts tests/custom-messages.spec.ts tests/full-reference.spec.ts tests/api-testing.spec.ts tests/crud-api.spec.ts tests/hybrid-testing.spec.ts tests/parallel-sharding.spec.ts tests/multi-tab.spec.ts tests/multi-user.spec.ts
+        run: npx playwright test tests/hard-assertions.spec.ts tests/soft-assertions.spec.ts tests/negative-assertions.spec.ts tests/numeric-assertions.spec.ts tests/polling-assertions.spec.ts tests/custom-messages.spec.ts tests/full-reference.spec.ts tests/api-testing.spec.ts tests/crud-api.spec.ts tests/hybrid-testing.spec.ts tests/parallel-sharding.spec.ts tests/multi-tab.spec.ts tests/multi-user.spec.ts --project=chromium
         env:
           SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
           SAUCE_PASSWORD: ${{ secrets.SAUCE_PASSWORD }}
