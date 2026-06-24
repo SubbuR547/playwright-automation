@@ -21,6 +21,7 @@ jobs:
           docker run \
             -e SAUCE_USERNAME=${{ secrets.SAUCE_USERNAME }} \
             -e SAUCE_PASSWORD=${{ secrets.SAUCE_PASSWORD }} \
+            -e CI=true \
             -v $(pwd)/playwright-report:/app/playwright-report \
             playwright-tests
 

@@ -15,9 +15,10 @@ COPY . .
 
 # Default command
 CMD ["npx", "playwright", "test", \
+  "tests/api-testing.spec.ts", \
+  "tests/crud-api.spec.ts", \
   "tests/hard-assertions.spec.ts", \
   "tests/negative-assertions.spec.ts", \
   "tests/numeric-assertions.spec.ts", \
-  "tests/api-testing.spec.ts", \
-  "tests/crud-api.spec.ts", \
-  "--project=chromium"]
+  "--project=chromium", \
+  "--workers=1"]
