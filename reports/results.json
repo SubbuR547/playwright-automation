@@ -1,0 +1,531 @@
+{
+  "config": {
+    "configFile": "D:\\PlayWrightPractice\\playwright.config.ts",
+    "rootDir": "D:/PlayWrightPractice/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/PlayWrightPractice/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/PlayWrightPractice/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tagged-tests.spec.ts",
+      "file": "tagged-tests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "login to OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-22T08:11:43.493Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "13ba8063dc59af4753e0-50a1b4150f8637c59bd4",
+          "file": "orangehrm-login.spec.ts",
+          "line": 15,
+          "column": 5
+        }
+      ],
+      "suites": [
+        {
+          "title": "Smoke Tests @smoke",
+          "file": "tagged-tests.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login works @smoke @login",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 10319,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Smoke: Login works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:11:43.499Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-0a2228a1c710f5c469e5",
+              "file": "tagged-tests.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "dashboard loads @smoke @dashboard",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke",
+                "dashboard"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 11658,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Smoke: Dashboard loads!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:11:54.142Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-fa21ba2e775a56d92442",
+              "file": "tagged-tests.spec.ts",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "PIM navigates @smoke @navigation",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "smoke",
+                "navigation"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19040,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Smoke: PIM navigates!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:11:54.427Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-1eee99fbbedbc56435e9",
+              "file": "tagged-tests.spec.ts",
+              "line": 26,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Regression Tests @regression",
+          "file": "tagged-tests.spec.ts",
+          "line": 36,
+          "column": 6,
+          "specs": [
+            {
+              "title": "add employee flow @regression @employee",
+              "ok": true,
+              "tags": [
+                "regression",
+                "regression",
+                "employee"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 42790,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Regression: Add employee works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:05.838Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-d51954f66506e9dac986",
+              "file": "tagged-tests.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "search employee @regression @employee",
+              "ok": true,
+              "tags": [
+                "regression",
+                "regression",
+                "employee"
+              ],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 28480,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Total rows including header: \u001b[33m6\u001b[39m\n"
+                        },
+                        {
+                          "text": "✅ Regression: Search works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:13.537Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-dfb65417f48300e53da0",
+              "file": "tagged-tests.spec.ts",
+              "line": 61,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Login Tests @login",
+          "file": "tagged-tests.spec.ts",
+          "line": 88,
+          "column": 6,
+          "specs": [
+            {
+              "title": "valid login @login @smoke",
+              "ok": true,
+              "tags": [
+                "login",
+                "login",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13442,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Login: Valid login works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:42.057Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-eb42d8a7ecfc68c479f0",
+              "file": "tagged-tests.spec.ts",
+              "line": 91,
+              "column": 7
+            },
+            {
+              "title": "invalid login shows error @login",
+              "ok": true,
+              "tags": [
+                "login",
+                "login"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 9322,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Login: Invalid credentials shows error!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:48.669Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-b5f740ec7292bfb43dc8",
+              "file": "tagged-tests.spec.ts",
+              "line": 101,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "API Tests @api",
+          "file": "tagged-tests.spec.ts",
+          "line": 121,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET users returns 200 @api",
+              "ok": true,
+              "tags": [
+                "api",
+                "api"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 113,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ API: GET users works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:55.539Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-bb2f3a0ad8565202cc41",
+              "file": "tagged-tests.spec.ts",
+              "line": 124,
+              "column": 7
+            },
+            {
+              "title": "POST creates resource @api",
+              "ok": true,
+              "tags": [
+                "api",
+                "api"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 757,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ API: POST works!\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-22T08:12:55.682Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "13ba8063dc59af4753e0-e93b44073b0b49b721eb",
+              "file": "tagged-tests.spec.ts",
+              "line": 133,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-22T08:11:41.980Z",
+    "duration": 76167.209,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
