@@ -38,9 +38,9 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on-first-retry',
-    launchOptions: {
-      slowMo: 1000, // 1 second delay between actions
-    },
+    // launchOptions: {
+    //   slowMo: 1000, // 1 second delay between actions
+    // },
     // Visual testing config
     viewport: { width: 1280, height: 720 },
   },
@@ -58,15 +58,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     /* Test against mobile viewports. */
     // {
