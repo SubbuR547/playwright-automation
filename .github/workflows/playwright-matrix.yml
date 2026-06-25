@@ -35,7 +35,7 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
 
       - name: Run tests on ${{ matrix.browser }}
-        run: npx playwright test tests/hard-assertions.spec.ts tests/negative-assertions.spec.ts tests/numeric-assertions.spec.ts tests/polling-assertions.spec.ts tests/custom-messages.spec.ts tests/full-reference.spec.ts tests/api-testing.spec.ts tests/crud-api.spec.ts tests/hybrid-testing.spec.ts --project=${{ matrix.browser }}
+        run: npx playwright test tests/assertions/ tests/api/ tests/ui/ --project=${{ matrix.browser }}
         env:
           SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
           SAUCE_PASSWORD: ${{ secrets.SAUCE_PASSWORD }}
