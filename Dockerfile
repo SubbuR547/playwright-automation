@@ -1,24 +1,18 @@
-# Official Playwright image — has all browsers!
 FROM mcr.microsoft.com/playwright:v1.60.0-jammy
 
-# Set working directory
 WORKDIR /app
 
-# Copy package files first (for caching)
 COPY package*.json ./
 
-# Install dependencies
 RUN npm ci
 
-# Copy all project files
 COPY . .
 
-# Default command
 CMD ["npx", "playwright", "test", \
-  "tests/api-testing.spec.ts", \
-  "tests/crud-api.spec.ts", \
-  "tests/hard-assertions.spec.ts", \
-  "tests/negative-assertions.spec.ts", \
-  "tests/numeric-assertions.spec.ts", \
+  "tests/assertions/hard-assertions.spec.ts", \
+  "tests/assertions/negative-assertions.spec.ts", \
+  "tests/assertions/numeric-assertions.spec.ts", \
+  "tests/api/api-testing.spec.ts", \
+  "tests/api/crud-api.spec.ts", \
   "--project=chromium", \
   "--workers=1"]
